@@ -1,0 +1,3935 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <title>Search Voice | Sound 17</title>
+
+
+
+
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://sound17.stg-ouctus.com/css/animate.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://sound17.stg-ouctus.com/css/custom.css">
+
+  <link rel="stylesheet" type="text/css" href="https://sound17.stg-ouctus.com/voice-actors-dashboard/css/dashboard.css">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://sound17.stg-ouctus.com/voice-actors-dashboard/css/responsive.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.css">
+  <style type="text/css">
+    .text-danger {
+
+      width: 100%;
+
+    }
+
+
+
+    .error {
+
+      color: #dc3545;
+
+      width: 100%;
+
+    }
+
+
+
+    .tophed ul li a.dropdown-item {
+      color: #333;
+      padding: 8px !important;
+    }
+
+    .tophed ul li a.dropdown-item:hover {
+      border-bottom: 0px;
+      color: #f61892;
+    }
+
+    .search-menu {
+      margin-top: 100px;
+      z-index: 100;
+    }
+
+    .category-filter {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      gap: 20px;
+    }
+
+    a.breadcrumbs {
+      color: #FB8CC9;
+    }
+
+    .searchborder {
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .head {
+      background-color: #FB8CC9;
+      font-size: large;
+      font-style: oblique;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .genre {
+      display: flex;
+      gap: 15px;
+    }
+
+    .profile-column {
+      display: flex;
+      justify-content: start;
+
+    }
+
+    .profile-spacer:hover {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .profile-column1 {
+      padding-right: 0;
+    }
+
+    .profile-column2 {
+      padding-left: 40px;
+    }
+
+    .profile-details {
+      display: flex;
+      justify-content: left;
+      align-items: flex-start;
+    }
+
+    .public-profile-image {
+      padding-bottom: 20px;
+      max-height: 250px;
+      width: 200px;
+    }
+
+    .profile-name .right {
+      padding-left: 80px;
+    }
+
+    .search-list-container {
+      max-width: 1200px;
+      margin: 0 auto 50px auto;
+    }
+
+    .uptodate-stars {
+      display: block;
+      width: 100%;
+
+    }
+
+    .uptodate-date {
+      font-size: 12px;
+      display: block;
+      width: 150px;
+    }
+
+    .profile-spacer {
+      margin-top: 45px;
+      padding: 20px;
+    }
+
+    .profile-spacer:hover {
+      background-color: #F2F2F2;
+      transition: 0.4s all;
+      border-radius: 8px;
+      cursor: pointer;
+
+    }
+
+    .goback {
+      font-size: 14px;
+      text-transform: none;
+      margin-top: 50px;
+    }
+
+    .button {
+      background-color: #FB8CC9;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    a.goback {
+      color: white;
+    }
+
+    a.goback:hover {
+      background-color: #F61892;
+      color: white;
+    }
+
+    a.profile-link {
+      color: white;
+      background-color: #FB8CC9;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    a.profile-link:hover {
+      background-color: #F61892;
+      color: white;
+
+    }
+
+    .profile-link .far {
+      padding-right: 6px;
+    }
+
+    .recording-facility {
+      color: #cfa6b3;
+    }
+
+    .tagkey {
+
+      font-size: small;
+      max-width: 100px;
+    }
+
+    .tagvalue {
+      padding-left: 40px;
+    }
+
+
+    .profile-row {
+      margin-top: 25px;
+    }
+
+    .search-play {
+      display: block;
+      border: groove lightgray 0.1em;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+     .search-play .search-file {
+      vertical-align: top;
+      padding: 20px;
+      margin-bottom: 5px;
+      transition: 0.5s all;
+      /* border: groove lightgray 0.1em;
+      border-radius: 5px; */
+      cursor: pointer;
+      width: 100%;
+      float: left;
+    }
+    .iframe-holder{
+      padding: 35px;
+    }
+    .audio-holder{
+      padding: 35px;
+    }
+   
+
+    .search-file {
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    
+
+    .presentation {
+      padding-top: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .presentation>p {
+      margin-bottom: 0;
+    }
+
+    a.live-brand {
+      color: black;
+      text-decoration: none;
+    }
+
+    .live-brand {
+      float: right;
+    }
+
+    .star .far {
+      padding-right: 10px;
+    }
+
+    .brand {
+      padding-top: 5px;
+    }
+
+    .up-to-date-stars .fas {
+      display: flex;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    .form-btn {
+      background-color: #F3F2F3;
+      border-radius: 4px;
+      padding: 8px;
+      border: none;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    i.fa::before {
+      font-size: 40px;
+    }
+   
+
+    /* ---------Media Queries-------- */
+
+    @media screen and (max-width: 575.98px) {
+      .category-filter {
+        display: list-item;
+        padding-top: 10px;
+      }
+
+      .search-menu {
+        margin-top: 10px;
+      }
+
+      .form-label {
+        padding-top: 15px;
+      }
+
+      .form-btn {
+        margin-top: 15px;
+      }
+
+      .profile-details {
+        display: none;
+      }
+
+      .profile-column {
+        display: block;
+        justify-content: center;
+      }
+
+      .profile-column2 {
+        padding-left: 0px;
+        margin-bottom: 20px;
+      }
+
+      .profile-name .right {
+        padding-left: 20px;
+      }
+
+      .star .far {
+        display: none;
+      }
+
+      .genre {
+        display: block;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .search-menu {
+        margin-top: 10px;
+      }
+
+      .genre {
+        display: block;
+      }
+
+      .profile-name .right {
+        padding-left: 20px;
+      }
+
+      .star .far {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .search-menu {
+        margin-top: 10px;
+      }
+
+      .genre {
+        display: block;
+      }
+
+      .profile-name .right {
+        padding-left: 10px;
+      }
+
+      .star .far {
+        display: none;
+      }
+
+      .presentation {
+        gap: 5px;
+      }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .search-menu {
+        margin-top: 110px;
+      }
+
+      .genre {
+        display: flex;
+      }
+
+      .star .far {
+        display: block;
+      }
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+
+  <header>
+
+    <div class="tophed" data-aos="zoom-in-left">
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-12 col-md-6" data-aos="fade-right" data-aos-delay="500">
+
+            <ul class="d-flex tophed-c">
+
+              <li> <a href="#">SUPPORT- (305)891-6500 <span class="d-none d-lg-inline"> | </span> </a>
+              </li>
+
+              <li class="logli"><a href="#">Mail: mail@sound-17.com</a></li>
+
+            </ul>
+
+            <div class="topl  text-left">
+
+            </div>
+
+          </div>
+
+          <div class="col-12 col-md-6" data-aos="fade-left" data-aos-delay="500">
+
+            <div class="topr">
+              <ul>
+
+                <li><a href="https://www.facebook.com/sound17"><i class="fab fa-facebook-f"></i></a>
+                </li>
+
+                <li><a href="https://twitter.com/sound17"><i class="fab fa-twitter"></i></a></li>
+
+                <li><a href="https://www.linkedin.com/sound17"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+
+                <li><a href="https://www.instagram.com/sound17"><i class="fab fa-instagram"></i></a>
+                </li>
+
+                <li>
+                  <a href="https://www.youtube.com/sound17"><i class="fab fa-youtube"></i></a>
+                </li>
+
+
+                <li><a href="https://www.youtube.com/sound17">
+                    <!-- <i class="fab fa-youtube"></i> --> <span class="d-none d-lg-inline"> |
+                    </span>
+                  </a></li>
+
+                <li class="logli"><a href="https://sound17.stg-ouctus.com/sign-in"> Login </a>/ <a
+                    href="https://sound17.stg-ouctus.com/registration">Register</a></li>
+
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="mobile-bar">
+
+      <i class="fas fa-bars"></i>
+
+    </div>
+    <div class="mlogo">
+      <a href="https://sound17.stg-ouctus.com"><img src="https://sound17.stg-ouctus.com/images/sound-17-w.png"></a>
+    </div>
+    <div class="bottomh bottom-header pt-2">
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-3">
+            <span class="hclose float-right">x</span>
+            <div class="logosec" data-aos="fade-up" data-aos-delay="500">
+
+              <a href="https://sound17.stg-ouctus.com"><img
+                  src="https://sound17.stg-ouctus.com/images/sound-17-w.png"></a>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-9 mt-md-0 mt-4">
+
+            <div class="headerlink">
+
+              <ul>
+
+                <li data-aos="zoom-in-up" data-aos-delay="300"><a href="https://sound17.stg-ouctus.com">HOME</a></li>
+
+                <li data-aos="zoom-in-up" data-aos-delay="500"><a
+                    href="https://sound17.stg-ouctus.com/search-voice">SEARCH
+                    VOICE </a></li>
+
+                <!-- <li data-aos="zoom-in-up" data-aos-delay="700"><a href="https://sound17.stg-ouctus.com/upload">UPLOAD </a>
+                                </li> -->
+
+                <li data-aos="zoom-in-up" data-aos-delay="900"><a href="https://sound17.stg-ouctus.com/faq">FAQ</a></li>
+
+                <li data-aos="zoom-in-up" data-aos-delay="1100"><a
+                    href="https://sound17.stg-ouctus.com/contact">CONTACT</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <!-- 
+    <section class="page_banner" style="background-image: url(images/search-banner1.jpg);">
+
+        <div class="container">
+
+            <div class="heading1 text-center ">
+
+                <h1>Search Voice</h1>
+
+            </div>
+
+        </div>
+
+    </section> -->
+  <div class="search-menu">
+    <ul class="search-filter category-filter">
+      <li><a class="breadcrumbs" href="">SEARCH</a></li>
+      <li><a class="breadcrumbs" href="">NEW HERE</a></li>
+      <li><a class="breadcrumbs" href="">FAVORITES</a></li>
+      <li><a class="breadcrumbs" href="">TERMS OF USE</a></li>
+      <li><a class="breadcrumbs" href="">SUPPORT</a></li>
+    </ul>
+  </div>
+
+  <section class="ptb-50 pt-0 search">
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+
+        </div>
+        <div class="col-md-10">
+
+          <div class="searchborder p-79">
+
+            <div class=" p-3">
+
+              <!--<h3 class="voice">Search By Checkbox</h3>
+
+                            <ul class="nav justify-content-center smenu pt-2">
+
+                                <li class="nav-item mr-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="suche" name="voice" value="Voice of Artist">
+                                        <label class="form-check-label" for="suche">Voice of Artist</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mr-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="neue" name="Idiom" value="Idiom">
+                                        <label class="form-check-label" for="neue">Idiom</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mr-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="fav" name="Genre" value="Genre">
+                                        <label class="form-check-label" for="fav">Genre</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item mr-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="Accent" value="Accent">
+                                        <label class="form-check-label" for="exampleCheck1">Accent</label>
+                                    </div>
+
+                                </li>
+
+                                <li class="nav-item mr-4">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="nut" name="Sound" value="Sound Designer">
+                                        <label class="form-check-label" for="nut">Sound Designer</label>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="support" name="Mixing" value="Mixing Engineer">
+                                        <label class="form-check-label" for="support">Mixing Engineer</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>-->
+              <P class="mt-3 form-title text-center font-weight-bold">Find Your Voice - Unique, Versatile,
+                Solful</P>
+              <form id="f_date" method="GET">
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <label for="selectFirst" class="form-label d-block text-left">Name</label>
+                    <input type="text" class="form-control" id="name_id" placeholder="Name">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectEight" class="form-label d-block text-left">Gender</label>
+                    <select name="gender" class="form-control" id="gender_id">
+                      <option selected disabled>Select Gender</option>
+                      <option value="1" selected>Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Div.</option>
+
+
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectEleven" class="form-label d-block text-left">Language</label>
+                    <select name="language" class="form-control" id="language_id">
+                      <option selected disabled>Select Gender</option>
+                      <option value="1">German</option>
+                      <option value="2">Arabic</option>
+                      <option value="3" selected>English</option>
+                      <option value="4">French</option>
+                      <option value="5">etc.</option>
+
+
+                    </select>
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+
+
+              <form id="f_date" method="GET">
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <label for="selectSixth" class="form-label d-block text-left">Vocal Range -
+                      Sound</label>
+                    <select name="vocal_range" class="form-control" id="vocal_range_id">
+                      <option selected disabled>Select</option>
+                      <option value="1">Deep</option>
+                      <option value="2" selected>Middle</option>
+                      <option value="3">High</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectSeventh" class="form-label d-block text-left">Vocal
+                      Age</label>
+                    <select name="age" class="form-control" id="age_id">
+                      <option selected disabled>Select Age</option>
+                      <option value="1">Child</option>
+                      <option value="2">Young</option>
+                      <option value="3" selected>Middle Age Minus</option>
+                      <option value="4">Middle Age Plus</option>
+                      <option value="5">Old</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectTwelve" class="form-label d-block text-left">Native
+                      Language</label>
+                    <select name="native_lang" class="form-control" id="native_lang_id">
+                      <option selected disabled>Select</option>
+                      <option value="1">German</option>
+                      <option value="2">Arabic</option>
+                      <option value="3" selected>English</option>
+                      <option value="4">French</option>
+                      <option value="5">etc.</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+
+              <form id="f_date" method="GET">
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <label for="selectNine" class="form-label d-block text-left">Accent</label>
+                    <select name="vocal_range" class="form-control" id="vocal_range_id">
+                      <option selected disabled>Select</option>
+                      <option value="1" selected>American</option>
+                      <option value="2">Chinese</option>
+                      <option value="3">Dutch</option>
+                      <option value="4">French</option>
+                      <option value="5">etc.</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectFifth" class="form-label d-block text-left">Select
+                      Genre</label>
+                    <select name="genre" class="form-control" id="genre_id">
+                      <option selected disabled>Select Genre</option>
+                      <option value="1">Audio Drama</option>
+                      <option value="2">Audio Book</option>
+                      <option value="3">Commercial</option>
+                      <option value="4">Cinema</option>
+                      <option value="5">Documentation</option>
+                      <option value="6">Lip-Sync</option>
+                      <option value="7">TV Feature Film</option>
+                      <option value="8" selected>TV Series</option>
+                      <option value="9">Games</option>
+                      <option value="10">Children&#039; s Voice</option>
+                      <option value="11">Comedy</option>
+                      <option value="12">Imitation</option>
+                      <option value="13">Narrative</option>
+                      <option value="14">OFF</option>
+                      <option value="15">Overlay</option>
+                      <option value="16">Trick</option>
+                      <option value="17">etc</option>
+
+
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectSecond" class="form-label d-block text-left">City</label>
+                    <input type="text" class="form-control" id="city_id" placeholder="City">
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+
+
+              <form id="f_date" method="GET">
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <label for="selectThirteen" class="form-label d-block text-left">Voice Of
+                      Artist</label>
+                    <select name="idiom" class="form-control" id="idiom_id">
+                      <option selected disabled>Select Age</option>
+                      <option value="1">Brad Pitt</option>
+                      <option value="2">Angelina Jolie</option>
+                      <option value="3" selected>Al Paciono</option>
+                      <option value="4">Marryl Streep</option>
+                      <option value="5">etc.</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectTen" class="form-label d-block text-left">Idiom</label>
+                    <select name="idiom" class="form-control" id="idiom_id">
+                      <option selected disabled>Select Age</option>
+                      <option value="1">Norddeutsch</option>
+                      <option value="2">Badisch</option>
+                      <option value="3" selected>Bayrisch</option>
+                      <option value="4">etc.</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="selectThird" class="form-label d-block text-left">Country</label>
+                    <input type="text" class="form-control" id="country_id" placeholder="Country">
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+
+
+              <form id="f_date" method="GET">
+                <h3 class=" d-block text-left">AUDIO SERVICES</h3>
+                <div class="row mb-2">
+                  <div class="col-md-4">
+                    <label for="" class="form-label d-block text-left">SKILLS</label>
+                    <div class="form-check">
+                      <input class="form-check-input d-block text-left" type="checkbox" value="" id="audio-producer">
+                      <label class="form-check-label d-block text-left" for="selectSkills">
+                        Audio Producer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input  d-block text-left" type="checkbox" value="" id="foley-artist">
+                      <label class="form-check-label  d-block text-left" for="selectSKills">
+                        Foley Artist
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input  d-block text-left" type="checkbox" value="" id="mixing-engineer">
+                      <label class="form-check-label  d-block text-left" for="selectSKills">
+                        Mixing Engineer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input  d-block text-left" type="checkbox" value="" id="music-producer">
+                      <label class="form-check-label  d-block text-left" for="selectSKills">
+                        Music Producer
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input  d-block text-left" type="checkbox" value="" id="sound-designer">
+                      <label class="form-check-label  d-block text-left" for="selectSKills">
+                        Sound Designer
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="" class="form-label d-block text-left">GENRE</label>
+                    <div class="genre">
+                      <div class="genre1">
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value=""
+                            id="audio-producer">
+                          <label class="form-check-label  d-block text-left" for="selectSkills">
+                            Audio Drama
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value="" id="foley-artist">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            Audio Bok
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value=""
+                            id="mixing-engineer">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            Commercial
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value=""
+                            id="music-producer">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            Cinema
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value=""
+                            id="sound-designer">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            Documentation
+                          </label>
+                        </div>
+                      </div>
+                      <div class="genre2">
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value="" id="lip-sync">
+                          <label class="form-check-label  d-block text-left" for="selectSkills">
+                            Lip-Sync
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value="" id="tv-film">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            TV Feature Film
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value="" id="tv-series">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            TV Series
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input  d-block text-left" type="checkbox" value="" id="games">
+                          <label class="form-check-label  d-block text-left" for="selectSKills">
+                            Games
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="col-md-12 col-sm-6">
+                      <label for="selectFourteen" class="form-label d-block text-left">Own
+                        Recording
+                        Facility</label>
+                      <div class="form-check">
+                        <input class="form-check-input  d-block text-left" type="checkbox" id="own-recording-facility"
+                          value="">
+                        <label class="form-check-label  d-block text-left" for="ownRecordingFacility"> <span
+                            class="fa-stack fa-lg">
+                            <i class="checkbox-annimate fa fa-square fa-stack-2x recording-facility"></i>
+                            <i class="fa fa-microphone fa-stack-1x fa-inverse"></i>
+                          </span></label>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6 pt-4">
+                      <label for="selectFourteen" class="form-label d-block text-left">This
+                        Account is
+                        up-to-date</label>
+                      <div class="form-check">
+                        <input class="form-check-input  d-block text-left" type="checkbox" id="up-to-date" value="">
+                        <label class="form-check-label text-left" for="upToDate"> <span
+                            class="d-flex up-to-date-stars fa-stack fa-lg">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </span></label>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </form>
+
+              <hr>
+
+              <form id="f_date" method="GET">
+                <div class="text-center pb-4 pt-4">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                      <button class="form-btn" id="reset-filter">RESET FILTER</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <button class="form-btn" id="sorta-z">SORT A-Z</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <button class="form-btn" id="show-results">SHOW RESULTS</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+
+              <!-- <div class="row" id>
+                                <div class="col-md-12">
+                                    <table id="mydata_table" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div> -->
+
+              <!-- <div class="row">
+
+                            <div class="col-md-4">
+
+
+
+                                <form>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+
+
+                                </form>
+
+                                <div class="mb-3 starhght">
+
+                                    <p>Lorem ipsum dolor sit <i>/ Lorem ipsum dolor sit.</i></p>
+
+                                    <div class="star d-flex">
+
+                                        <span class="ring mx-3"></span>
+
+                                        <i class="fas fa-star"></i>
+
+                                        <i class="fas fa-star"></i>
+
+                                        <i class="fas fa-star"></i>
+
+                                        <i class="fas fa-star"></i>
+
+                                        <i class="fas fa-star"></i>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="filter text-center mb-3">
+
+                                    <button type="button" class="btn btn-secondary">Filter Lorem ipsum</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <form>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+
+
+                                </form>
+
+                                <div class="mb-3 starhght">
+
+                                    <p>Lorem ipsum dolor sit <i>/ Lorem ipsum dolor sit.</i></p>
+
+                                    <div class="d-flex">
+
+                                        <span class="ring mx-3"></span>
+
+                                        <i class="fas fa-microphone voicee text-white"></i>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                                <div class="filter text-center mb-3">
+
+                                    <button type="button" class="btn btn-secondary">Filter Lorem ipsum</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+
+
+                                <form>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <label>Name <i>/ Name</i></label>
+
+                                        <input type="text" class="form-control" placeholder="ahr">
+
+                                    </div>
+
+
+
+                                </form>
+
+                                <div class="mb-3 starhght">
+
+                                    <p>Lorem ipsum dolor sit <i>/ Lorem ipsum dolor sit.</i></p>
+
+
+
+                                </div>
+
+
+
+                                <div class="filter text-center mb-3">
+
+                                    <button type="button" class="btn btn-secondary">Filter Lorem ipsum</button>
+
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
+
+  </section>
+
+
+
+
+
+
+
+  <section>
+    <div class="container">
+      <div class="search-list-container">
+        <div class="row">
+          <div class="col-md-12 mt-5 head">
+            List of Artists
+          </div>
+        </div>
+        <div class="row profile-spacer mt-5">
+          <div class="col-md-7">
+            <div class="profile-column">
+              <div class="profile-column1">
+                <img src="https://www.loftstudios.de/speakermusic/uploads/images/2289_1634213225.jpg"
+                  class="public-profile-image" alt="">
+              </div>
+              <div class="profile-column2">
+                <h2 class="profile-name">
+                  Marc Vogel
+                  <span class="right">
+                    &#9794; </span>
+                </h2>
+
+                <span class="capitalize">Vienna</span>
+
+                <div class="profile-row user-tags">
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Klang:</div>
+                    <div class="tagvalue">dunkel, sonor, souverän, markant, sehr</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Voice Age:</div>
+                    <div class="tagvalue">Middle Age plus</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Language:</div>
+                    <div class="tagvalue">German</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Native:</div>
+                    <div class="tagvalue ">German, Austrian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Dialect:</div>
+                    <div class="tagvalue ">Viennese</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Accent:</div>
+                    <div class="tagvalue">American, French, Italian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Country:</div>
+                    <div class="tagvalue">Austria</div>
+                  </div>
+                </div>
+                <div class="pt-3 ">
+                  <a class="profile-link" href="https://sound17.stg-ouctus.com/public/html/user-profile.html"><i
+                      class="far fa-user"></i><span>Open Profile</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class=" search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+
+
+                  <script type="text/javascript"
+                    src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+                  <script type="text/javascript">
+                    $(function () {
+                      $('#play-video').click(function () {
+                        if (!$('#iframe').length) {
+                          $('#iframeHolder').html('<iframe id="iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="100%" height="auto"></iframe>');
+                        }
+                      });
+                    });
+                  </script>
+                  <i id="play-video" class="fab fa-youtube fa-lg"></i>
+                  
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div id="iframeHolder" class="iframe-holder"></div>
+            </div>
+            <div class="search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <script type="text/javascript"
+                  src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+                <script type="text/javascript">
+                  $(function () {
+                    $('#play-video2').click(function () {
+                      if (!$('#iframe').length) {
+                        $('#iframeHolder1').html('<iframe id="iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" width="100%" height="auto"></iframe>');
+                      }
+                    });
+                  });
+                </script>
+                
+                <i id="play-video2" class="fab fa-youtube fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="iframeHolder1" class="iframe-holder"></div>
+            </div>
+            <div class="search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <script type="text/javascript">
+                    $(function () {
+                      $('#play-audio').click(function () {
+                        if (!$('#myAudio').length) {
+                          $('#audioHolder').html('<audio id="myAudio" src="https://araucariawildlifesanctuary.com.au/audio/ybgcall.mp3%22" width="100%" height="auto"></audio>');
+                        }
+                      });
+                    });
+                  </script>
+                  
+                  <i id="play-audio" class="fas fa-play"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="audioHolder" class="audio-holder"></div>
+            </div>
+            <a href="" class="show-more d-flex justify-content-center" style="border-style: none;">Show More</a>
+          </div>
+        </div>
+
+        <div class="row profile-spacer mt-5">
+          <div class="col-md-7">
+            <div class="profile-column">
+              <div class="profile-column1">
+                <img src="https://www.loftstudios.de/speakermusic/uploads/images/2289_1634213225.jpg"
+                  class="public-profile-image" alt="">
+              </div>
+              <div class="profile-column2">
+                <h2 class="profile-name">
+                  Marc Vogel
+                  <span class="right">
+                    &#9794; </span>
+                </h2>
+
+                <span class="capitalize">Vienna</span>
+
+                <div class="profile-row user-tags">
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Klang:</div>
+                    <div class="tagvalue">dunkel, sonor, souverän, markant, sehr
+
+                    </div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Voice Age:</div>
+                    <div class="tagvalue">Middle Age plus</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Language:</div>
+                    <div class="tagvalue">German</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Native:</div>
+                    <div class="tagvalue ">German, Austrian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Dialect:</div>
+                    <div class="tagvalue ">Viennese</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Accent:</div>
+                    <div class="tagvalue">American, French, Italian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Country:</div>
+                    <div class="tagvalue">Austria</div>
+                  </div>
+                </div>
+                <div class="pt-3 ">
+                  <a class="profile-link" href="https://sound17.stg-ouctus.com/public/html/user-profile.html"><i
+                      class="far fa-user"></i><span>Open Profile</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row profile-spacer mt-5">
+          <div class="col-md-7">
+            <div class="profile-column">
+              <div class="profile-column1">
+                <img src="https://www.loftstudios.de/speakermusic/uploads/images/2289_1634213225.jpg"
+                  class="public-profile-image" alt="">
+              </div>
+              <div class="profile-column2">
+                <h2 class="profile-name">
+                  Marc Vogel
+                  <span class="right">
+                    &#9794; </span>
+                </h2>
+
+                <span class="capitalize">Vienna</span>
+
+                <div class="profile-row user-tags">
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Klang:</div>
+                    <div class="tagvalue">dunkel, sonor, souverän, markant, sehr
+
+                    </div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Voice Age:</div>
+                    <div class="tagvalue">Middle Age plus</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Language:</div>
+                    <div class="tagvalue">German</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Native:</div>
+                    <div class="tagvalue ">German, Austrian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Dialect:</div>
+                    <div class="tagvalue ">Viennese</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Accent:</div>
+                    <div class="tagvalue">American, French, Italian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Country:</div>
+                    <div class="tagvalue">Austria</div>
+                  </div>
+                </div>
+                <div class="pt-3 ">
+                  <a class="profile-link" href="https://sound17.stg-ouctus.com/public/html/user-profile.html"><i
+                      class="far fa-user"></i><span>Open Profile</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row profile-spacer mt-5">
+          <div class="col-md-7">
+            <div class="profile-column">
+              <div class="profile-column1">
+                <img src="https://www.loftstudios.de/speakermusic/uploads/images/2289_1634213225.jpg"
+                  class="public-profile-image" alt="">
+              </div>
+              <div class="profile-column2">
+                <h2 class="profile-name">
+                  Marc Vogel
+                  <span class="right">
+                    &#9794; </span>
+                </h2>
+
+                <span class="capitalize">Vienna</span>
+
+                <div class="profile-row user-tags">
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Klang:</div>
+                    <div class="tagvalue">dunkel, sonor, souverän, markant, sehr
+
+                    </div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Voice Age:</div>
+                    <div class="tagvalue">Middle Age plus</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Language:</div>
+                    <div class="tagvalue">German</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Native:</div>
+                    <div class="tagvalue ">German, Austrian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Dialect:</div>
+                    <div class="tagvalue ">Viennese</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Accent:</div>
+                    <div class="tagvalue">American, French, Italian</div>
+                  </div>
+                  <div class="profile-details">
+                    <div class="tagkey padding-left-zero-mobile">Country:</div>
+                    <div class="tagvalue">Austria</div>
+                  </div>
+                </div>
+                <div class="pt-3 ">
+                  <a class="profile-link" href="https://sound17.stg-ouctus.com/public/html/user-profile.html"><i
+                      class="far fa-user"></i><span>Open Profile</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row search-play">
+              <div class="search-file">
+
+                <div class=" presentation">
+                  <i class="fas fa-pause-circle fa-lg"></i>
+                  <p>Presentation | Marc Vogel</p>
+                </div>
+
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-6 star">
+                      <i class="far fa-star fa-stack-2x"></i>
+                    </div>
+                    <div class="col-md-6 brand">
+                      <a class="live-brand" href=""><span>Brand</span></a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- <section class="ptb-50 pt-0 offer"
+        style="background-image: url(images/search-bg.jpg);background-repeat: no-repeat;background-size: cover;">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-10">
+
+                    <h2 class="text-white text-center pt-5">Explore voice actors by</h2>
+
+                    <div class="row p-5">
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-11.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Audiobooks</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-13.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Animation</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-10.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Business</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3 ">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-09.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Documentaries</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-08.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Educational</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-07.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Internet Vedio</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-06.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Movie Trailers</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-05.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Podcasting</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-04.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Radio</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-03.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Audiobooks</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-02.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Voice Assistant</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+
+                            <div class="card">
+
+                                <div class="p-62">
+
+                                    <div class="card-img">
+
+                                        <div class="explore">
+
+                                            <img class="w-50" src="https://sound17.stg-ouctus.com/images/search-page-icon-01.png">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <h3>Vedio Games</h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="ptb-50 pt-0 favorite-list"
+        style="background-image: url(images/bgg.jpg);background-repeat: no-repeat;background-size: cover;">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-10">
+
+                    <h2 class="text-center pt-5">The favorites list</h2>
+
+                    <p class="text-center">When looking for a voice sample, you can memorize the individual language
+                        files and save them on a list of favorites.</p>
+
+                    <div class="table-responsive">
+
+                        <table class="table">
+
+                            <thead>
+                                <tr class="fl-head">
+
+                                    <th>Name of List</th>
+
+                                    <th>Song of List</th>
+
+                                    <th>
+
+                                        <input class="form-control" type="text" placeholder="Name of List"
+                                            style="background-color: #fff7; color: #fff;">
+
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+
+
+                            <tbody>
+                                <tr>
+
+                                    <td>
+
+                                        <div class="d-flex">
+
+                                            <div>
+
+                                                <img src="https://sound17.stg-ouctus.com/images/member4.jpg" alt="member4" width="100">
+
+                                            </div>
+
+                                            <div class="flex-grow-1 ml-3">
+
+                                                <h2>Ryan Putnam</h2>
+
+                                                <p>Rockers Band</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <ol type="1" class="ml-3">
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                        </ol>
+
+                                    </td>
+
+                                    <td>
+
+                                        <div class="pl-4">
+
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebzzthdc3ZVhuQGkFq0yf9H_pYKLWibTETzQey-6PhOgwyBQ-_ilBS0d0AZQJ1bfbNA&usqp=CAU"
+                                                alt="">
+
+                                        </div>
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="d-flex">
+
+                                            <div>
+
+                                                <img src="https://sound17.stg-ouctus.com/images/member4.jpg" alt="member4" width="100">
+
+                                            </div>
+
+                                            <div class="flex-grow-1 ml-3">
+
+                                                <h2>Ryan Putnam</h2>
+
+                                                <p>Rockers Band</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <ol type="1" class="ml-3">
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                        </ol>
+
+                                    </td>
+
+                                    <td>
+
+                                        <div class="pl-4">
+
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebzzthdc3ZVhuQGkFq0yf9H_pYKLWibTETzQey-6PhOgwyBQ-_ilBS0d0AZQJ1bfbNA&usqp=CAU"
+                                                alt="">
+
+                                        </div>
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="d-flex">
+
+                                            <div>
+
+                                                <img src="https://sound17.stg-ouctus.com/images/member4.jpg" alt="member4" width="100">
+
+                                            </div>
+
+                                            <div class="flex-grow-1 ml-3">
+
+                                                <h2>Ryan Putnam</h2>
+
+                                                <p>Rockers Band</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <ol type="1" class="ml-3">
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                        </ol>
+
+                                    </td>
+
+                                    <td>
+
+                                        <div class="pl-4">
+
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebzzthdc3ZVhuQGkFq0yf9H_pYKLWibTETzQey-6PhOgwyBQ-_ilBS0d0AZQJ1bfbNA&usqp=CAU"
+                                                alt="">
+
+                                        </div>
+
+
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="d-flex">
+
+                                            <div>
+
+                                                <img src="https://sound17.stg-ouctus.com/images/member4.jpg" alt="member4" width="100">
+
+                                            </div>
+
+                                            <div class="flex-grow-1 ml-3">
+
+                                                <h2>Ryan Putnam</h2>
+
+                                                <p>Rockers Band</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+
+                                        <ol type="1" class="ml-3">
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                            <li>Song Name</li>
+
+                                        </ol>
+
+                                    </td>
+
+                                    <td>
+
+                                        <div class="pl-4">
+
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTebzzthdc3ZVhuQGkFq0yf9H_pYKLWibTETzQey-6PhOgwyBQ-_ilBS0d0AZQJ1bfbNA&usqp=CAU"
+                                                alt="">
+
+                                        </div>
+
+
+
+                                    </td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="ptb-50 pt-0 hiring">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-10">
+
+                    <h2 class="text-center pt-5">Sound17 makes hiring voice actors fast and easy</h2>
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-4 p-5">
+
+                            <div class="card text-center">
+
+                                <div class="card-img">
+
+                                    <div class="mt-3">
+
+                                        <img src="https://sound17.stg-ouctus.com/images/1.png">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="upload">
+
+                                        <h3>CREATE YOUR PROFILE</h3>
+
+                                    </div>
+
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                        print, graphic or web designs.</p>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-4 p-5">
+
+                            <div class="card text-center">
+
+                                <div class="card-img">
+
+                                    <div class="mt-3">
+
+                                        <img src="https://sound17.stg-ouctus.com/images/2.png">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="upload">
+
+                                        <h3>UPLOAD YOUR VOICE</h3>
+
+                                    </div>
+
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                        print, graphic or web designs.</p>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-4 p-5">
+
+                            <div class="card text-center">
+
+                                <div class="mt-3">
+
+                                    <img src="https://sound17.stg-ouctus.com/images/3.png">
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="upload">
+
+                                        <h3>CREATE CONNECTION NOW</h3>
+
+                                    </div>
+
+                                    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                        print, graphic or web designs.</p>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> -->
+
+
+
+
+  <footer class="">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-12 col-md-4">
+
+          <div class="flogo">
+
+            <img src="https://sound17.stg-ouctus.com/images/sound-17-w.png">
+
+            <p data-aos="fade-up" data-aos-duration="1200"><i class="fas fa-phone"></i> <a href="tel:925-600-0650">
+                925-600-0650</a></p>
+
+            <p data-aos="fade-up" data-aos-duration="1300"><i class="fas fa-location-arrow"></i> 786 South
+              Park Avenue, NewYork,USA <br></p>
+
+            <p data-aos="fade-up" data-aos-duration="1400"><a href="mailto:info@up2speedsports"><i
+                  class="fas fa-envelope"></i> info@sound17.com</a></p>
+
+            <p data-aos="fade-up" data-aos-duration="1500"><i class="fas fa-clock"></i> Mon-Fri 9:30am
+              -8:00pm</p>
+
+            <h5 data-aos="fade-up" data-aos-duration="1600">FOLLOW US:</h5>
+
+            <ul class="d-flex">
+
+              <li data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000"><a
+                  href="https://www.facebook.com/sound17"><i class="fab fa-facebook-f"></i></a></li>
+
+              <li data-aos="fade-left" data-aos-offset="0" data-aos-duration="1200"><a
+                  href="https://www.twitter.com/sound17"><i class="fab fa-twitter"></i></a></li>
+
+              <li data-aos="fade-left" data-aos-offset="0" data-aos-duration="1400"><a
+                  href="https://www.linkedin.com/sound17"><i class="fab fa-linkedin-in"></i></a></li>
+
+              <li data-aos="fade-left" data-aos-offset="0" data-aos-duration="1600"><a
+                  href="https://www.instagram.com/sound17"><i class="fab fa-instagram"></i></a></li>
+
+              <li data-aos="fade-left" data-aos-offset="0" data-aos-duration="1800"><a
+                  href="https://www.youtube.com/sound17"><i class="fab fa-youtube"></i></a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-4 mt-md-0 mt-3">
+
+          <div class="fnews">
+
+            <h4 data-aos="fade-up" data-aos-duration="1000">QUICK LINKS</h4>
+
+            <ul>
+
+
+
+
+
+
+
+              <li data-aos="fade-up" data-aos-duration="1800"><a href="https://sound17.stg-ouctus.com/faq">FAQ</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="2200"><a
+                  href="https://sound17.stg-ouctus.com/terms-service">TAC</a>
+              </li>
+
+              <li data-aos="fade-up" data-aos-duration="2400"><a
+                  href="https://sound17.stg-ouctus.com/legal-notice">LEGAL
+                  NOTICES</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="2600"><a href="https://sound17.stg-ouctus.com/data-privacy">DATA
+                  POLICY</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="3000"><a
+                  href="https://sound17.stg-ouctus.com/cookies">COOKIEUSE</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-4 mt-md-0 mt-3">
+
+          <!--<div class="fcontact">
+
+            <h4 data-aos="fade-up" data-aos-duration="1600">CONTACT US</h4>
+
+          
+            <form>
+
+              <div class="form-group" data-aos="fade-up" data-aos-duration="1800">
+
+                <input type="email" class="form-control" placeholder="Email" required="" name="">
+
+              </div>
+
+              <div class="form-group" data-aos="fade-up" data-aos-duration="2000">
+
+                <textarea class="form-control" placeholder="Message..." required=""></textarea>
+
+              </div>
+
+              <button data-aos="fade-up" data-aos-duration="2200" type="submit" class="btn btn-round w-100">submit</button>
+
+            </form>
+
+          </div>-->
+          <div class="fnews">
+
+            <h4 data-aos="fade-up" data-aos-duration="1000">PAGES</h4>
+
+            <ul>
+
+              <li data-aos="fade-up" data-aos-duration="1000"><a href="https://sound17.stg-ouctus.com">HOME</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="1200"><a href="https://sound17.stg-ouctus.com/about">ABOUT
+                  US</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="1400"><a
+                  href="https://sound17.stg-ouctus.com/search-voice">SEARCH
+                  VOICE</a></li>
+
+              <li data-aos="fade-up" data-aos-duration="1600" data-aos-offset="0"><a
+                  href="https://sound17.stg-ouctus.com/contact">CONTACT US</a></li>
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <section class="copyright text-center">
+
+    <div class="container">
+
+      <p class="mb-0" data-aos-offset="0" data-aos="fade-right" data-aos-duration="1600"><small> Copyright &copy;
+          <span id="year"></span> all right reserve sound17</small>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://sound17.stg-ouctus.com/voice-actors-dashboard/js/wow.js"></script>
+
+  <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://sound17.stg-ouctus.com/voice-actors-dashboard/js/countdown.js"></script>
+
+  <script src="https://sound17.stg-ouctus.com/voice-actors-dashboard/js/progress.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <script src="https://sound17.stg-ouctus.com/voice-actors-dashboard/js/custom.js"></script>
+
+  <script>
+    $('#sidebar').load('include/sidebar.html')
+
+    $('#header').load('include/header.html')
+  </script>
+
+
+
+  <script>
+    am4core.ready(function () {
+
+
+
+      // Themes begin
+
+      am4core.useTheme(am4themes_animated);
+
+      // Themes end
+
+
+
+      // Create map instance
+
+      var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+
+
+      // Set map definition
+
+      chart.geodata = am4geodata_worldLow;
+
+
+
+      // Set projection
+
+      chart.projection = new am4maps.projections.Miller();
+
+
+
+      // Create map polygon series
+
+      var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+
+
+      // Exclude Antartica
+
+      polygonSeries.exclude = ["AQ"];
+
+
+
+      // Make map load polygon (like country names) data from GeoJSON
+
+      polygonSeries.useGeodata = true;
+
+
+
+      // Configure series
+
+      var polygonTemplate = polygonSeries.mapPolygons.template;
+
+      polygonTemplate.tooltipText = "{name}";
+
+      polygonTemplate.polygon.fillOpacity = 0.6;
+
+
+
+
+
+      // Create hover state and set alternative fill color
+
+      var hs = polygonTemplate.states.create("hover");
+
+      hs.properties.fill = chart.colors.getIndex(0);
+
+
+
+      // Add image series
+
+      var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+
+      imageSeries.mapImages.template.propertyFields.longitude = "longitude";
+
+      imageSeries.mapImages.template.propertyFields.latitude = "latitude";
+
+      imageSeries.mapImages.template.tooltipText = "{title}";
+
+      imageSeries.mapImages.template.propertyFields.url = "url";
+
+
+
+      var circle = imageSeries.mapImages.template.createChild(am4core.Circle);
+
+      circle.radius = 3;
+
+      circle.propertyFields.fill = "color";
+
+      circle.nonScaling = true;
+
+
+
+      var circle2 = imageSeries.mapImages.template.createChild(am4core.Circle);
+
+      circle2.radius = 3;
+
+      circle2.propertyFields.fill = "color";
+
+
+
+
+
+      circle2.events.on("inited", function (event) {
+
+        animateBullet(event.target);
+
+      })
+
+
+
+
+
+      function animateBullet(circle) {
+
+        var animation = circle.animate([{
+
+          property: "scale",
+
+          from: 1 / chart.zoomLevel,
+
+          to: 5 / chart.zoomLevel
+
+        }, {
+
+          property: "opacity",
+
+          from: 1,
+
+          to: 0
+
+        }], 1000, am4core.ease.circleOut);
+
+        animation.events.on("animationended", function (event) {
+
+          animateBullet(event.target.object);
+
+        })
+
+      }
+
+
+
+      var colorSet = new am4core.ColorSet();
+
+
+
+      imageSeries.data = [{
+
+        "title": "Brussels",
+
+        "latitude": 50.8371,
+
+        "longitude": 4.3676,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Copenhagen",
+
+        "latitude": 55.6763,
+
+        "longitude": 12.5681,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Paris",
+
+        "latitude": 48.8567,
+
+        "longitude": 2.3510,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Reykjavik",
+
+        "latitude": 64.1353,
+
+        "longitude": -21.8952,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Moscow",
+
+        "latitude": 55.7558,
+
+        "longitude": 37.6176,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Madrid",
+
+        "latitude": 40.4167,
+
+        "longitude": -3.7033,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "London",
+
+        "latitude": 51.5002,
+
+        "longitude": -0.1262,
+
+        "url": "http://www.google.co.uk",
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Peking",
+
+        "latitude": 39.9056,
+
+        "longitude": 116.3958,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "New Delhi",
+
+        "latitude": 28.6353,
+
+        "longitude": 77.2250,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Tokyo",
+
+        "latitude": 35.6785,
+
+        "longitude": 139.6823,
+
+        "url": "http://www.google.co.jp",
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Ankara",
+
+        "latitude": 39.9439,
+
+        "longitude": 32.8560,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Buenos Aires",
+
+        "latitude": -34.6118,
+
+        "longitude": -58.4173,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Brasilia",
+
+        "latitude": -15.7801,
+
+        "longitude": -47.9292,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Ottawa",
+
+        "latitude": 45.4235,
+
+        "longitude": -75.6979,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Washington",
+
+        "latitude": 38.8921,
+
+        "longitude": -77.0241,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Kinshasa",
+
+        "latitude": -4.3369,
+
+        "longitude": 15.3271,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Cairo",
+
+        "latitude": 30.0571,
+
+        "longitude": 31.2272,
+
+        "color": colorSet.next()
+
+      }, {
+
+        "title": "Pretoria",
+
+        "latitude": -25.7463,
+
+        "longitude": 28.1876,
+
+        "color": colorSet.next()
+
+      }];
+
+
+
+
+
+
+
+    }); // end am4core.ready()
+  </script>
+
+
+
+  <script>
+    am4core.ready(function () {
+
+
+
+      // Themes begin
+
+      am4core.useTheme(am4themes_animated);
+
+      // Themes end
+
+
+
+      var chart = am4core.create("barchart", am4charts.XYChart);
+
+
+
+      chart.data = [{
+
+        "country": "USA",
+
+        "visits": 2025
+
+      }, {
+
+        "country": "China",
+
+        "visits": 1882
+
+      }, {
+
+        "country": "Japan",
+
+        "visits": 1809
+
+      }, {
+
+        "country": "Germany",
+
+        "visits": 1322
+
+      }, {
+
+        "country": "UK",
+
+        "visits": 1122
+
+      }, {
+
+        "country": "France",
+
+        "visits": 1114
+
+      }, {
+
+        "country": "India",
+
+        "visits": 984
+
+      }, {
+
+        "country": "Spain",
+
+        "visits": 711
+
+      }, {
+
+        "country": "Netherlands",
+
+        "visits": 665
+
+      }, {
+
+        "country": "Russia",
+
+        "visits": 580
+
+      }, {
+
+        "country": "South Korea",
+
+        "visits": 443
+
+      }, {
+
+        "country": "Canada",
+
+        "visits": 441
+
+      }];
+
+
+
+      chart.padding(40, 40, 40, 40);
+
+
+
+      var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+
+      categoryAxis.renderer.grid.template.location = 0;
+
+      categoryAxis.dataFields.category = "country";
+
+      categoryAxis.renderer.minGridDistance = 60;
+
+      categoryAxis.renderer.inversed = true;
+
+      categoryAxis.renderer.grid.template.disabled = true;
+
+
+
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+      valueAxis.min = 0;
+
+      valueAxis.extraMax = 0.1;
+
+      //valueAxis.rangeChangeEasing = am4core.ease.linear;
+
+      //valueAxis.rangeChangeDuration = 1500;
+
+
+
+      var series = chart.series.push(new am4charts.ColumnSeries());
+
+      series.dataFields.categoryX = "country";
+
+      series.dataFields.valueY = "visits";
+
+      series.tooltipText = "{valueY.value}"
+
+      series.columns.template.strokeOpacity = 0;
+
+      series.columns.template.column.cornerRadiusTopRight = 10;
+
+      series.columns.template.column.cornerRadiusTopLeft = 10;
+
+      //series.interpolationDuration = 1500;
+
+      //series.interpolationEasing = am4core.ease.linear;
+
+      var labelBullet = series.bullets.push(new am4charts.LabelBullet());
+
+      labelBullet.label.verticalCenter = "bottom";
+
+      labelBullet.label.dy = -10;
+
+      labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
+
+
+
+      chart.zoomOutButton.disabled = true;
+
+
+
+      // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+
+      series.columns.template.adapter.add("fill", function (fill, target) {
+
+        return chart.colors.getIndex(target.dataItem.index);
+
+      });
+
+
+
+      setInterval(function () {
+
+        am4core.array.each(chart.data, function (item) {
+
+          item.visits += Math.round(Math.random() * 200 - 100);
+
+          item.visits = Math.abs(item.visits);
+
+        })
+
+        chart.invalidateRawData();
+
+      }, 2000)
+
+
+
+      categoryAxis.sortBySeries = series;
+
+
+
+    }); // end am4core.ready()
+  </script>
+
+
+
+  <script>
+    $('table').wrap('<div class="table-responsive"></div>')
+    var owl = $('.testislide');
+
+    owl.owlCarousel({
+
+      items: 1,
+
+      loop: true,
+
+      margin: 20,
+
+      autoplay: true,
+
+      autoplayTimeout: 4000,
+
+      smartSpeed: 1000,
+
+      autoplayHoverPause: true,
+
+      nav: false,
+
+      dot: true,
+
+      responsiveClass: true,
+
+
+
+    });
+
+    var owl = $('.mainslide');
+
+    owl.owlCarousel({
+
+      items: 1,
+
+      loop: true,
+
+      margin: 0,
+
+      autoplay: false,
+
+      autoplayTimeout: 4000,
+
+      smartSpeed: 1000,
+
+      autoplayHoverPause: true,
+
+      nav: false,
+
+      dot: false,
+
+      responsiveClass: true,
+
+
+
+    });
+
+    var owl = $('.clients');
+
+    owl.owlCarousel({
+
+      items: 4,
+
+      loop: true,
+
+      margin: 20,
+
+      autoplay: true,
+
+      autoplayTimeout: 4000,
+
+      smartSpeed: 1000,
+
+      autoplayHoverPause: true,
+
+      nav: false,
+
+      dot: true,
+
+      responsiveClass: true,
+
+      responsive: {
+        360: {
+
+          items: 2
+
+        },
+        480: {
+
+          items: 2
+
+        },
+
+        800: {
+
+          items: 3
+
+        },
+
+        1000: {
+
+          items: 4
+
+        },
+
+      }
+
+    });
+  </script>
+
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> -->
+
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js">
+  </script>
+
+
+
+  <script>
+    $(document).ready(function () {
+
+      $('.signupform').validate({
+
+        rules: {
+
+          role: {
+
+            required: true
+
+          },
+
+          email: {
+
+            required: true,
+
+            email: true
+
+          },
+
+          name: {
+
+            required: true
+
+          },
+
+          gender: {
+
+            required: true
+
+          },
+
+          location: {
+
+            required: true
+
+          },
+
+          password: {
+
+            required: true,
+
+            minlength: 6
+
+          },
+
+          confirm_password: {
+
+            required: true,
+
+            equalTo: "#password"
+
+          }
+
+
+
+        }
+
+
+
+
+
+      });
+
+
+
+
+
+    })
+
+
+
+
+
+    $(document).ready(function () {
+
+      $('#loginForm').validate({
+
+        rules: {
+
+          email: {
+
+            required: true
+
+          },
+
+          password: {
+
+            required: true
+
+          }
+
+
+
+        }
+
+
+
+
+
+      });
+
+
+
+
+
+    })
+  </script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('#mydata_table').DataTable();
+    });
+
+
+  </script>
+  <script>
+    function checkFiles(files) {
+      var btnSubmit = document.getElementById("stsubmit");
+      if (files.length > 3) {
+        alert("You can only select maximum of 3 files");
+        document.getElementById('stfiles').files = list.files;
+        btnSubmit.disabled = true;
+      }
+      else {
+        btnSubmit.disabled = false;
+      }
+    }
+
+    function ValidationEvent() {
+      var abc = document.mydata.images.vlaue;
+
+      alert(abc);
+    }
+  </script>
+
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js">
+  </script>
+
+  <script>
+
+    function PasswordAlert() {
+
+      var password = document.updatePass.password.value;
+      var c_password = document.updatePass.confirm_password.value;
+
+
+
+      if (password == c_password) {
+        $('#messageee').html('Matching').css('color', 'green');
+
+      } else {
+
+        $('#messageee').html('Confirm password do not match !').css('color', 'red');
+        return false;
+      }
+
+    }
+
+    $(document).ready(function () {
+      $(document).find("#skill_id").change(function (e) {
+        $("#f_date").submit();
+      });
+      $(document).find("#genre_id").change(function (e) {
+        $("#f_date").submit();
+      });
+
+    });
+
+
+  </script>
+
+
+
+  <!--<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+          <span aria-hidden="true">x</span>
+
+        </button>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+
+                            <div class="logimg">
+
+                                <img src="https://sound17.stg-ouctus.com/images/loginimg.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-md-6">
+
+                            
+                            
+                            
+
+                                <form method="POST" action="https://sound17.stg-ouctus.com/login-user" accept-charset="UTF-8" class="loginform"><input name="_token" type="hidden" value="S1GQP15IoNWZKUuUHhLL3u98PvHc3UnLfs5mJmTW">
+
+                                <h3>Login</h3>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+
+                                    </div>
+
+                                    <input type="email" required="" name="email" class="form-control" placeholder="Email">
+
+                                </div>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+
+                                    </div>
+
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+
+                                </div>
+
+                                <label><input type="checkbox"  name=""> Remamber me</label>
+
+
+
+                                <div class="btnsec  form-group">
+
+                                    <button class="btn btn-sm col-4">Login</button>
+
+                                </div>
+
+                                <p class=" mb-2"><a href="#">Forgot Password?</a></p>
+
+                                <p class=" mb-0">Not a member yet? <a href="script:void(0)" class="signupshow">Sign up now.</a></p>
+
+                            
+
+                            </form>
+
+                            <div id="msg"></div>
+
+                            <form class="signupform" id="signupform" style="display: none;">
+
+                                
+
+                                <h3>Register</h3>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+
+                                    </div>
+
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Full Name">
+
+                                    <span class="text-danger" id="name-error"></span>
+
+                                </div>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+
+                                    </div>
+
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email id">
+
+                                    <span class="text-danger" id="email-error"></span>
+
+                                </div>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+
+                                    </div>
+
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Mobile Number">
+
+                                    <span class="text-danger" id="phone-error"></span>
+
+                                </div>
+
+                                
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-book"></i></span>
+
+                                    </div>
+
+                                    <select class="form-control" name="role" id="role">
+
+                                        <option value="">Select Type</option>
+
+                                        <option value="2">Voice Actor</option>
+
+                                        <option value="3">Producer</option>
+
+                                    </select>
+
+                                    <span class="text-danger" id="role-error"></span>
+
+                                    
+
+                                </div>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+
+                                    </div>
+
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+
+                                    <span class="text-danger" id="password-error"></span>
+
+                                </div>
+
+                                <div class="input-group mb-3">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+
+                                    </div>
+
+                                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password">
+
+                                    <span class="text-danger" id="cPassword-error"></span>
+
+                                </div>
+
+
+
+                                <div class="btnsec text-center form-group">
+
+                                    <button class="btn btn-sm col-4">Sign up</button>
+
+                                </div>
+
+                                <p class="text-center">Already have an account? <a href="script:void(0)" class="signinshow">Sign in.</a></p>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>-->
+
+
+
+  <!-- Modal -->
+
+  <!--<div class="modal fade" id="freequote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Get A Free Consultation</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+          <span aria-hidden="true">&times;</span>
+
+        </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form>
+
+                        <p><small>Drop us a message and we will contact you back shortly.</small></p>
+
+                        <div class="form-group">
+
+                            <input type="text" placeholder="Full Name" class="form-control" name="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input type="email" placeholder="Email" class="form-control" name="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input type="text" placeholder="Phone/WhatsApp/skype" class="form-control" name="">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <textarea class="form-control" placeholder="Message..."></textarea>
+
+                        </div>
+
+                        <div class="btnsec">
+
+                            <button class="btn btn-block">Submit</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+ <script>
+
+        
+
+        $(document).ready(function() {
+
+            $('.signupform').css('display','none')
+
+            $('.signupshow').click(function() {
+
+                $('.signupform').css('display', 'block')
+
+                $('.loginform').css('display', 'none')
+
+            });
+
+            $('.signinshow').click(function() {
+
+                $('.loginform').css('display', 'block')
+
+                $('.signupform').css('display', 'none')
+
+            });
+
+        })
+
+    </script>
+
+
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+  $('#signupform').on('submit',function(event){
+
+  event.preventDefault();
+
+  
+
+  $('#name-error').text('');
+
+  $('#email-error').text('');
+
+  $('#phone-error').text('');
+
+  $('#password-error').text('');
+
+  $('#cPassword-error').text('');
+
+  $('#role-error').text('');
+
+
+
+  
+
+  let name = $('#name').val();
+
+  let email = $('#email').val();
+
+  let phone = $('#phone').val();
+
+  let role = $('#role').val();
+
+  let password = $('#password').val();
+
+  let confirm_password = $('#confirm_password').val();
+
+
+
+  $.ajax({
+
+    url: "/sound17/public/register-user",
+
+    type:"POST",
+
+    data:{
+
+    "_token": "S1GQP15IoNWZKUuUHhLL3u98PvHc3UnLfs5mJmTW",
+
+    name:name,
+
+    email:email,
+
+    phone:phone,
+
+    role:role,
+
+    password:password,
+
+    confirm_password:confirm_password,
+
+    },
+
+    success:function(response){
+
+    if(response){
+
+      $('#msg').text(response.success);
+
+      $('#msg').addClass('alert alert-success');
+
+      $('#signupform')[0].reset();
+
+    }
+
+    
+
+    },
+
+    
+
+    error:function(response){
+
+      $('#name-error').text(response.responseJSON.errors.name);
+
+      $('#email-error').text(response.responseJSON.errors.email);
+
+      $('#phone-error').text(response.responseJSON.errors.phone);
+
+      $('#role-error').text(response.responseJSON.errors.role);
+
+      $('#password-error').text(response.responseJSON.errors.password);
+
+      $('#cPassword-error').text(response.responseJSON.errors.confirm_password);
+
+    }
+
+    
+
+   });
+
+  });
+
+  });
+
+</script>-->
+
+
+
+</body>
+
+
+
+</html>
